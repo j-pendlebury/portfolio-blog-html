@@ -137,13 +137,68 @@ main {
   grid-template-rows: repeat(2, 1fr);
   grid-gap: $gap;
   padding: 40px 0;
+  font-family: $lato;
+  font-weight: 400;
+
+  
+  h2 {
+    font-size: 2.25rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  .date {
+    font-family: $monda;
+    font-size: 0.8rem;
+  }
 
   .first-project {
     grid-column: 2/7;
+    display: flex;
+
+    .image {
+      flex: 1.5;
+    }
+
+    .text-wrapper {
+      display: flex;
+      flex-direction: column;
+      flex:1;
+      position: relative;
+
+      h2 {
+        margin-bottom: 10px;
+        flex: 1;
+      }
+
+      p {
+        text-overflow: ellipsis;
+        overflow: hidden;
+        flex: 5;
+      }
+
+      .date {
+        font-family: $monda;
+        font-size: 0.8rem;
+      }
+    }
   }
 
   .second-project {
     grid-column: 7/9;
+    display: flex;
+    flex-direction: column;
+    max-height: 100%;
+
+    .image {
+      max-width: 100%;
+    }
+
+    .date {
+      justify-items: flex-end;
+    }
   }
 
   .other-projects {
@@ -154,7 +209,7 @@ main {
 
     .other-project {
       width: 100%;
-      background-color: green;
+      // background-color: green;
 
       &:nth-child(2) {
         margin: 0 30px;
