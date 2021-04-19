@@ -10,6 +10,10 @@ $silk-but-brighter: #FFF1EB41;
 $monda: 'Monda', sans-serif;
 $lato: 'Lato', sans-serif;
 
+// Grid setup
+$columns: repeat(9, 1fr);
+$gap: 20px;
+
 // CSS
 html, * {
   margin: 0;
@@ -17,7 +21,7 @@ html, * {
   box-sizing: content-box;
 }
 
-.top-border-line {
+.gradient-border-line {
   height: 5px;
   width: 100vw;
   background: linear-gradient(90deg, $medium-champagne 0%, $max-blue 50%, $unbleached-silk 100%);
@@ -26,8 +30,8 @@ html, * {
 nav {
   font-family: $monda;
   display: grid;
-  grid-template-columns: repeat(9, 1fr);
-  column-gap:20px;
+  grid-template-columns: $columns;
+  column-gap: $gap;
   margin-top: 10px;
 
   p {
@@ -72,3 +76,98 @@ nav {
   }
 }
 
+main {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: $columns;
+  grid-gap: $gap;
+  font-family: $lato;
+
+  .top {
+    grid-column: 2/6;
+    border-left: 5px solid $spanish-blue;
+    padding: 30px;
+    position: relative;
+
+    a {
+      text-decoration: none;
+      color: $onyx;
+      transition:text-decoration 500ms ease-in-out;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    p {
+      font-family: $monda;
+      font-size: 0.875rem;
+      font-weight: 400;
+    }
+
+    h1 {
+      font-size: 2.25rem;
+      color: $spanish-blue;
+      padding: 30px 0;
+    }
+
+    h3 {
+      font-weight: 400;
+      font-size: 1rem;
+    }
+  }
+
+  .image {
+    grid-column: 6/9;
+    display: flex;
+    align-items: center;
+    
+    img {
+      max-width: 100%;
+    }
+  }
+}
+
+.projects {
+  background-color: $silk-but-brighter;
+  min-height: 200px;
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: $columns;
+  grid-template-rows: repeat(2, 1fr);
+  grid-gap: $gap;
+  padding: 40px 0;
+
+  .first-project {
+    grid-column: 2/7;
+  }
+
+  .second-project {
+    grid-column: 7/9;
+  }
+
+  .other-projects {
+    grid-row: 2/3;
+    grid-column: 2/9;
+    display: flex;
+    justify-content: space-between;
+
+    .other-project {
+      width: 100%;
+      background-color: green;
+
+      &:nth-child(2) {
+        margin: 0 30px;
+      }
+    }
+  }
+}
+
+footer {
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: $monda;
+  font-size: 1rem;
+}
