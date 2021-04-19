@@ -44,33 +44,24 @@ nav {
     font-size: 1.5rem;
   }
 
-  ul {
+  div {
+    grid-column: 8/9;
+  }
+
+  a {
+    text-decoration: none;
+    color: $onyx;
+    cursor: pointer;
+    transition: border-bottom 150ms ease-in;
     display: flex;
-    grid-column: 6/9;
     
-    li {
-      list-style-type: none;
-      padding-left: 25px;
-      font-size: 1.125rem;
+    font-size: 1.125rem;
+    justify-content: center;
+    align-items: center;
 
-      a {
-        text-decoration: none;
-        color: $onyx;
-        cursor: pointer;
-        transition: border-bottom 150ms ease-in;
-
-        &:hover {
-          text-shadow: 2px 2px 5px $medium-champagne;
-          border-bottom: 5px solid $medium-champagne;
-        }
-      }
-
-      &:nth-child(2) {
-        &::before, &::after {
-          content: '*';
-          padding: 0 25px;
-        }
-      }
+    &:hover {
+      text-shadow: 2px 2px 5px $medium-champagne;
+      border-bottom: 5px solid $medium-champagne;
     }
   }
 }
