@@ -27,6 +27,10 @@ html, * {
   background: linear-gradient(90deg, $medium-champagne 0%, $max-blue 50%, $unbleached-silk 100%);
 }
 
+body {
+  overflow-x: hidden;
+}
+
 nav {
   font-family: $monda;
   display: grid;
