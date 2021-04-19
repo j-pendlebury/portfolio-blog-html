@@ -143,6 +143,7 @@ main {
 
   p {
     font-size: 1rem;
+    padding-top: 20px;
   }
 
   .date {
@@ -152,11 +153,27 @@ main {
 
   img {
     max-width:100%;
+    border-radius: 10px;
+    box-shadow: 2px 2px 4px $onyx;
   }
 
   .first-project {
     grid-column: 2/7;
     display: flex;
+
+    img {
+      transition: all 800ms ease;
+    }
+
+    &:hover{
+      img {
+        box-shadow: 0 0 10px $max-blue;
+      }
+
+      p {
+        text-decoration: underline;
+      }
+    }
 
     .image {
       flex: 1.5;
@@ -182,6 +199,7 @@ main {
         text-overflow: ellipsis;
         overflow: hidden;
         flex: 5;
+        padding-top: 10px;
       }
 
       .date {
@@ -196,6 +214,20 @@ main {
     display: flex;
     flex-direction: column;
     max-height: 100%;
+
+    img {
+      transition: all 800ms ease;
+    }
+
+    &:hover{
+      img {
+        box-shadow: 0 0 10px $max-blue;
+      }
+
+      p {
+        text-decoration: underline;
+      }
+    }
 
     .image {
       max-width: 100%;
@@ -214,7 +246,20 @@ main {
 
     .other-project {
       width: 100%;
-      // background-color: green;
+      
+      img {
+        transition: all 800ms ease;
+      }
+
+      &:hover{
+        img {
+          box-shadow: 0 0 10px $max-blue;
+        }
+
+        p {
+          text-decoration: underline;
+        }
+      }
 
       &:nth-child(2) {
         margin: 0 30px;
