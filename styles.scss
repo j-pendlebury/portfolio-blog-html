@@ -1,0 +1,74 @@
+// Colours
+$onyx: #39393A;
+$spanish-blue: #1c77c3;
+$max-blue: #40bcd8;
+$medium-champagne: #efe4b2;
+$unbleached-silk: #fad7c7;
+$silk-but-brighter: #FFF1EB41;
+
+// Fonts
+$monda: 'Monda', sans-serif;
+$lato: 'Lato', sans-serif;
+
+// CSS
+html, * {
+  margin: 0;
+  padding: 0;
+  box-sizing: content-box;
+}
+
+.top-border-line {
+  height: 5px;
+  width: 100vw;
+  background: linear-gradient(90deg, $medium-champagne 0%, $max-blue 50%, $unbleached-silk 100%);
+}
+
+nav {
+  font-family: $monda;
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  column-gap:20px;
+  margin-top: 10px;
+
+  p {
+    grid-column: 3/5;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+  }
+
+  ul {
+    display: flex;
+    grid-column-end: 7;
+    
+    li {
+      list-style-type: none;
+      padding-left: 25px;
+      font-size: 1.125rem;
+
+      a {
+        text-decoration: none;
+        color: $onyx;
+        cursor: pointer;
+        transition: border-bottom 150ms ease-in;
+
+        &:hover {
+          text-shadow: 2px 2px 5px $medium-champagne;
+          border-bottom: 5px solid $medium-champagne;
+        }
+      }
+
+      &::after {
+        content: '*';
+        padding-left: 25px;
+      }
+
+      &:last-child {
+        &::after {
+          content: '';
+          padding-left: 0;
+        }
+      }
+    }
+  }
+}
+
