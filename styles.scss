@@ -117,28 +117,32 @@ main {
 }
 
 .projects {
-  background-color: $silk-but-brighter;
-  min-height: 200px;
+  background: linear-gradient(-135deg, $max-blue 60%, $spanish-blue 100%);
   margin-top: 50px;
+  margin: 50px 50px 0 50px;
   display: grid;
   grid-template-columns: $columns;
-  grid-template-rows: repeat(2, 1fr);
   grid-gap: $gap;
   padding: 40px 0;
   font-family: $lato;
   font-weight: 400;
+  color: white;
+  border-radius: 5px;
 
   @media (min-width: 1400px) {
     grid-template-columns: 3fr repeat(7, 1fr) 3fr;
   }
   
   h2 {
-    font-size: 2.25rem;
+    font-size: 2rem;
+    padding-top: 20px;
+    text-shadow: 2 2 8px $onyx;
   }
 
   p {
     font-size: 1rem;
     padding-top: 20px;
+    line-height: 25px;
   }
 
   .date {
@@ -148,13 +152,17 @@ main {
 
   img {
     max-width:100%;
-    border-radius: 10px;
-    box-shadow: 2px 2px 4px $onyx;
+    border-radius: 5px;
   }
 
   .first-project {
     grid-column: 2/7;
     display: flex;
+    cursor: pointer;
+
+    h2 {
+      padding-top: 0;
+    }
 
     img {
       transition: all 800ms ease;
@@ -162,7 +170,7 @@ main {
 
     &:hover{
       img {
-        box-shadow: 0 0 10px $max-blue;
+        box-shadow: 0 0 10px $onyx;
       }
 
       p {
@@ -209,6 +217,7 @@ main {
     display: flex;
     flex-direction: column;
     max-height: 100%;
+    cursor: pointer;
 
     img {
       transition: all 800ms ease;
@@ -216,7 +225,7 @@ main {
 
     &:hover{
       img {
-        box-shadow: 0 0 10px $max-blue;
+        box-shadow: 0 0 10px $onyx;
       }
 
       p {
@@ -225,11 +234,12 @@ main {
     }
 
     .image {
-      max-width: 100%;
+      width: 100%;
     }
 
-    .date {
-      justify-items: flex-end;
+    p {
+      display: none;
+      visibility: hidden;
     }
   }
 
@@ -238,6 +248,7 @@ main {
     grid-column: 2/9;
     display: flex;
     justify-content: space-between;
+    cursor: pointer;
 
     .other-project {
       width: 100%;
@@ -248,7 +259,7 @@ main {
 
       &:hover{
         img {
-          box-shadow: 0 0 10px $max-blue;
+          box-shadow: 0 0 10px $onyx;
         }
 
         p {
@@ -267,7 +278,7 @@ footer {
   height: 50px;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-end;
   font-family: $monda;
   font-size: 1rem;
 }
