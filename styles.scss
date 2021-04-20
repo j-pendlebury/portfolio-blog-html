@@ -151,14 +151,18 @@ main {
   }
 
   img {
-    max-width:100%;
+    width:100%;
     border-radius: 5px;
   }
 
   .first-project {
     grid-column: 2/7;
-    display: flex;
-    cursor: pointer;
+
+    a {
+      display: flex;
+      text-decoration: none;
+      color: inherit;
+    }
 
     h2 {
       padding-top: 0;
@@ -182,7 +186,7 @@ main {
       flex: 1.5;
 
       img {
-        max-width: 100%;
+        width: 100%;
       }
     }
 
@@ -199,25 +203,22 @@ main {
       }
 
       p {
-        text-overflow: ellipsis;
-        overflow: hidden;
         flex: 5;
         padding-top: 10px;
-      }
-
-      .date {
-        font-family: $monda;
-        font-size: 0.8rem;
       }
     }
   }
 
   .second-project {
     grid-column: 7/9;
-    display: flex;
-    flex-direction: column;
-    max-height: 100%;
-    cursor: pointer;
+
+    a {
+      display: flex;
+      flex-direction: column;
+      max-height: 100%;
+      color: inherit;
+      text-decoration: none;
+    }
 
     img {
       transition: all 800ms ease;
@@ -252,6 +253,11 @@ main {
 
     .other-project {
       width: 100%;
+
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
       
       img {
         transition: all 800ms ease;
